@@ -123,6 +123,6 @@ print(lis)
 '''
 for i in players:
         for j in i.values():
-                for k in j.values():
+                for k in j.keys():
                         lis.append(k)
-print(k)
+print(lis)
