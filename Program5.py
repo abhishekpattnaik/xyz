@@ -24,6 +24,7 @@ class student(schoolmember):
 t = teacher("Prafulla",60,1000000)
 s = student("Abhishek",23,100)
 l = [t,s]
+print()
 for i in l:
     i.info()
     print()
