@@ -1,2 +1,3 @@
-D = {1:"Name1",2:"Name2",3:"Name3",4:"Name4",5:"Name5"}
-for i in D: print(i)
+import pandas as pd
+dic = {'Name': ["John", "Smith"], 'Age': [30, 40]}
+pd.DataFrame(data=dic)
