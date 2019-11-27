@@ -17,4 +17,4 @@ except ShortInputException as ex:
            '{0} long, expected at least {1}')
           .format(ex.length, ex.atleast))
 else:
-    print('No exception was raised.')
+    print('No excepti on was raised.')

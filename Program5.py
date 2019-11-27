@@ -24,6 +24,14 @@ class student(schoolmember):
 t = teacher("Prafulla",60,1000000)
 s = student("Abhishek",23,100)
 l = [t,s]
+<<<<<<< HEAD
 for i in l:
     i.info()
     print()
+=======
+print()
+for i in l:
+    i.info()
+    print()
+print("Thank you")
+>>>>>>> 6746aa6d14a395c0321bc86e5e739422241c7dab
