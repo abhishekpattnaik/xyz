@@ -1,4 +1,5 @@
 import pandas as pd 
+# import pdb;pdb.set_trace() 
 x1 = pd.read_excel('trafficking.xlsx')
 c = 0
 D = {}
@@ -12,4 +13,4 @@ for i in x1.advertiser_name:
         D[i]={x2.brand_name:[x2.show]}
 x3 = pd.DataFrame(D)
 x3.to_csv('testing1.csv')
-print(x3)
+print(D)
