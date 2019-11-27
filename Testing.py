@@ -1,14 +1,13 @@
-import pandas as pd 
-x1 = pd.read_excel('trafficking.xlsx')
-c = 0
-D = {}
-for i in x1.advertiser_name:
-    #print(i)
-    x2=x1.loc[c]
-    c=c+1
-    D[i]={x2.brand_name:[x2.show]}
-
-#print(x2.show)
-x3 = pd.DataFrame(D)
-#print(D)
-x3.to_csv('testing1.csv')
+import pandas as pd
+D = {
+    'Name':["Abhishek","Sanjay","Ravi"],
+    'Age':[23,21,23],
+    'Roll no':[423,43,23],
+    'Marks':{'Science':89,'Maths':78}
+} 
+D['Marks']['Computer Science']=98
+k={'Computer Science':98}
+'''for i in D:
+    if i == 'Marks':
+        D['Marks']=k'''
+print(D)
