@@ -1,17 +1,31 @@
 import pandas as pd 
-import pprint 
-x1 = pd.read_excel('trafficking.xlsx')
-c = 0
-D = {}
-for i in x1.advertiser_name:
-    x2=x1.loc[c]
-    c=c+1
-    if i in D.keys():
-        if x2.brand_name in D[i].keys():
-            D[i][x2.brand_name].append(x2.show)
+import xlsxwriter
+xlObjext = pd.read_excel('trafficking.xlsx')
+rowNo = 0
+main_dict = {}
+for adName in xlObjext.advertiser_name:
+    rowObj=xlObjext.loc[rowNo]
+    rowNo+=1
+    if adName in main_dict.keys():
+        if rowObj.brand_name in main_dict[adName].keys():
+            if rowObj.show not in main_dict[adName][rowObj.brand_name]:
+                main_dict[adName][rowObj.brand_name].append(rowObj.show)
         else:
-            D[i][x2.brand_name]=[x2.show]
+            main_dict[adName][rowObj.brand_name]=[rowObj.show]
     else:
-        D[i]={x2.brand_name:[x2.show]}
-pp = pprint.PrettyPrinter(indent=4)
-pp.pprint(D)
+        main_dict[adName]={rowObj.brand_name:[rowObj.show]}
+workbook = xlsxwriter.Workbook("Assignment1.xlsx")
+worksheet = workbook.add_worksheet()
+rowNo=1
+worksheet.write(0,0,'Advertiser Name',)
+worksheet.write(0,1,'Brand Name')
+worksheet.write(0,2,'Show')
+for advertiser_name in main_dict.keys():
+    for brand_name in main_dict[advertiser_name].keys():
+        for show_name in main_dict[advertiser_name][brand_name]:
+            worksheet.write(rowNo,0,advertiser_name)
+            worksheet.write(rowNo,1,brand_name)
+            worksheet.write(rowNo,2,show_name)
+            rowNo+=1
+workbook.close()
+# print(pd.DataFrame(main_dict))

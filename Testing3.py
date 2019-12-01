@@ -13,7 +13,8 @@ for adName in xlObjext.advertiser_name:
             main_dict[adName][rowObj.brand_name]=[rowObj.show]
     else:
         main_dict[adName]={rowObj.brand_name:[rowObj.show]}
-x3 = pd.DataFrame(main_dict)
+x3 = pd.DataFrame(main_dict,columns=['Advertiser Name','Brand Name','Show'])
+
 D={}
 ad=[]
 bn=[]
@@ -28,7 +29,4 @@ D['advertiser_name']=ad
 D['brand_name']=bn
 D['show_name']=sn      
 xx = pd.DataFrame(D)
-print(xx)
-xx.to_excel("output.xlsx")
-print("Done")
-print(xx)
+print(x3)

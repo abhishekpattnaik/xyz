@@ -1,10 +1,9 @@
-D = {
-    1:{11:[1,2,3,4],12:[5,6,7,8]},
-    2:{21:[9,10,11,14],22:[15,16,17,18]},
-    3:{31:[19,20,21,22],32:[23,24,25,26]}
-}
-for i in D.keys():
-    for k in D[i].keys():
-        print(k)
-D[1][11].append(1221)
-print(D)
+import pandas as pd
+column_name = ['Advertiser_Name','Brand_Name','Shows']
+dataObj = pd.read_excel('trafficking.xlsx')
+# dataObj = pd.DataFrame({'Advertiser_name':dataObj['advertiser_name'],'Brand_name':dataObj['brand_name'],'Shows':dataObj['show']})
+dataObj.filter(items=['advertiser_name', 'brand_name','show'])
+dataObj.sort_values("advertiser_name", inplace=True)  
+dataObj.drop_duplicates(inplace=True)
+dataObj.to_excel('AMN.xlsx',index=False)
+print(dataObj)
