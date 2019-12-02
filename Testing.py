@@ -1,3 +1,4 @@
+import json as js
 import pandas as pd 
 xlObjext = pd.read_excel('trafficking.xlsx')
 rowNo = 0
@@ -28,7 +29,9 @@ D['advertiser_name']=ad
 D['brand_name']=bn
 D['show_name']=sn      
 xx = pd.DataFrame(D)
-print(xx)
-xx.to_excel("output.xlsx")
-print("Done")
-print(xx)
+print(js.dumps(D))
+
+# print(xx)
+# xx.to_excel("output.xlsx")
+# print("Done")
+# print(xx)
