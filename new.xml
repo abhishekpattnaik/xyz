@@ -1,0 +1,26 @@
+<metaData>
+	<food>
+		<item name="Breakfast">Idly</item>
+		<price>$2.5</price>
+		<description>Two idly's with chutney</description>
+		<calories>553</calories>
+	<speciality>South Indian Special</speciality></food>
+	<food>
+		<item name="Breakfast">Aloo Paratha</item>
+		<price>$2.5</price>
+		<description>Two aloo partha with chutney</description>
+		<calories>5053</calories>
+	</food>
+	<food>
+		<item name="Breakfast">Poori</item>
+		<price>$2.5</price>
+		<description>Two pooris with sabji</description>
+		<calories>553</calories>
+	</food>
+	<food>
+		<item name="Breakfast">Paper Dosa</item>
+		<price>$3.5</price>
+		<description>one dosa with chutney</description>
+		<calories>553</calories>
+	</food>
+</metaData>
