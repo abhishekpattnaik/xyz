@@ -4,7 +4,7 @@
 		<price>$2.5</price>
 		<description>Two idly's with chutney</description>
 		<calories>553</calories>
-	<speciality>South Indian Special</speciality></food>
+	</food>
 	<food>
 		<item name="Breakfast">Aloo Paratha</item>
 		<price>$2.5</price>
