@@ -7,7 +7,7 @@ def to_dataFrame(root):
             tempDict[sub_ele.tag]=sub_ele.text
         dataframe=dataframe.append(tempDict,ignore_index=True)
     return dataframe
-tree = ET.parse('test.xml')
+tree = ET.parse('log1.xml')
 root = tree.getroot()
 tempDict={}
 dataframe = to_dataFrame(root)
