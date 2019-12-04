@@ -11,6 +11,6 @@ tree = ET.parse('XML test/log1.xml')
 root = tree.getroot()
 tempDict={}
 dataframe = to_dataFrame(root)
-# dataframe.to_excel('XML test/Test.xlsx',sheet_name=root[0].tag)
-print(dataframe)
+dataframe.to_excel('XML test/Test.xlsx',sheet_name=root[0].tag)
+# print(dataframe)
 print('Completed')

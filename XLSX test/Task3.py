@@ -7,6 +7,6 @@ def searchQuery(dataFrame,inputSearch):
     elif dataFrame['Shows'].str.contains(inputSearch).any():
         return dataFrame.loc[dataFrame['Shows']==inputSearch]
     else: return 'Input query not found'
-dataObj = pd.read_excel('trafficking.xlsx')
+dataObj = pd.read_excel('XLSX test/trafficking.xlsx')
 dataObj = pd.DataFrame({'Advertiser_name':dataObj['advertiser_name'],'Brand_name':dataObj['brand_name'],'Shows':dataObj['show']})
 print(searchQuery(dataObj,input('Enter the input')))
