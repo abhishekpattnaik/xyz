@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aliens>
+	<alien>
+		<name>Abhishek</name>
+		<salary>37000</salary>
+	</alien>
+	<alien>
+		<name>Rishikesh</name>
+		<salary>50000</salary>
+	</alien>
+</aliens>
